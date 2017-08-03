@@ -33,16 +33,20 @@ driver.checkbox(:index => 2).click
 driver.textarea(:class => 'element textarea medium').click
 ```
 
-### Watir pegar a localização de um elemento.
+### No Watir para pegar a localização de um elemento.
 ```ruby
-location = browser.element(:id, 'id').wd.location<br>
+location = driver.element(:id, 'id').wd.location<br>
 puts "location x = #{location[0]}"<br>
 puts "location y = #{location[1]}"
 ```
 
-### Watir colocar o foco em um determinado elemento, usamos a função "focus".
+### No Watir para colocar o foco em um determinado elemento, usamos a função "focus".
 ```ruby
-browser.textarea(:class, 'element textarea medium').focus
+driver.textarea(:class, 'element textarea medium').focus
 ```
 
+### No Watir para pegar o texto de um determinado elemento usamos a função "text".
+```ruby
+puts driver.p(:id => 'my_description').text
+```
 
