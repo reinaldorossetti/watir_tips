@@ -26,6 +26,13 @@ driver.text_field(:id => 'my_text_field').set 'Yes!'
 driver.textarea(:class => 'element textarea medium').set 'It was a long time ago, I do not remember'
 ```
 
+### Para efetuar um clique em um elemento radio, checkbox, textarea devemos usar a função "click".
+```ruby
+driver.radio(:name => 'familiar_rails', :value => '3').click
+driver.checkbox(:index => 2).click
+driver.textarea(:class => 'element textarea medium').click
+```
+
 ### Watir pegar a localização de um elemento:<br>
 location = browser.element(:id, 'id').wd.location<br>
 puts "location x = #{location[0]}"<br>
