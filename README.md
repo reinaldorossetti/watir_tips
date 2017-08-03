@@ -74,3 +74,10 @@ driver.select_list(:id => 'usage').select_value '2'
 puts driver.p(:text => 'For Watir demonstration purposes only.').id #=> output: 'my_description'
 ```
 
+### No Watir para verificar se um determinado elemento foi dado o click ou set no caso do radio button, usamos o "set?" com uma interrogação no final vai retornar true ou false.
+```ruby
+browser.radio(:name => 'familiar_rails', :value => '1').click
+browser.radio(:name => 'familiar_rails', :value => '1').set? #=> true
+browser.radio(:name => 'familiar_rails', :value => '3').set # same as click 
+browser.radio(:name => 'familiar_rails', :value => '1').set? #=> false
+```
