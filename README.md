@@ -50,3 +50,21 @@ driver.textarea(:class, 'element textarea medium').focus
 puts driver.p(:id => 'my_description').text
 ```
 
+
+### Trabalhando com upload de arquivo.
+```ruby
+driver.file_field.set 'C:/watir.txt'
+```
+
+### Para limpara a seleção de um determinado compo usamos a função "clear".
+```ruby
+driver.checkbox(:index => 1).clear
+```
+
+
+### Para trabalhar com campos combobox/select usamos a função "select" passando o texto que deseja selecionar no combobox e 
+### no caso da função "select_value", passamos o value do elemento, como no exemplo abaixo.
+```ruby
+driver.select_list(:id => 'usage').select 'Less than a year'
+driver.select_list(:id => 'usage').select_value '2'
+```
