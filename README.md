@@ -10,7 +10,20 @@ gem install watir-webdriver
 ### funções que o framework tem disponível.
 ```ruby
 require 'watir-webdriver'
-browser = Watir::Browser.new :firefox
+driver = Watir::Browser.new :firefox
+```
+
+### Para carregar a URL do Browser devemos usar a função "goto".
+```ruby
+require 'watir-webdriver'
+driver = Watir::Browser.new :firefox # should open a new Firefox window
+driver.goto 'http://nitrowriters.com/form/form.html'
+```
+
+### Para enviar um texto para um campo texto ou textarea devemos usar a função "set".
+```ruby
+driver.text_field(:id => 'my_text_field').set 'Yes!'
+driver.textarea(:class => 'element textarea medium').set 'It was a long time ago, I do not remember'
 ```
 
 ### Watir pegar a localização de um elemento:<br>
