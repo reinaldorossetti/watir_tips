@@ -35,8 +35,8 @@ driver.textarea(:class => 'element textarea medium').click
 
 ### No Watir para pegar a localização de um elemento.
 ```ruby
-location = driver.element(:id, 'id').wd.location<br>
-puts "location x = #{location[0]}"<br>
+location = driver.element(:id, 'id').wd.location
+puts "location x = #{location[0]}"
 puts "location y = #{location[1]}"
 ```
 
