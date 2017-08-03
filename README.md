@@ -68,7 +68,7 @@ driver.select_list(:id => 'usage').select 'Less than a year'
 driver.select_list(:id => 'usage').select_value '2'
 ```
 
-### No Watir para pegar um determinado atributo de um elemento, passamos o elemento com uma referência dele (:value => "Name123") ou .p(:text => 'Reinaldo') e por fim o atributo que deseja ver.
+### No Watir para pegar um determinado atributo de um elemento, passamos o elemento com uma referência dele .input(:value => "Name123") ou .p(:text => 'Reinaldo') e por fim o atributo que deseja ver.
 
 ```ruby
 puts driver.p(:text => 'For Watir demonstration purposes only.').id #=> output: 'my_description'
