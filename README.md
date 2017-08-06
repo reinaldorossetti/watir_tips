@@ -1,5 +1,5 @@
 # watir_tips
-No meu emprego atual, alguns projetos a galera implementou o Watir Framework, é um framework pouco falado no brasil, geralmente se fala mais do Capybara, o Capybara tem uma comunidade mais forte podemos falar. Eu já tinha lido alguma coisa no blog do desenvolvedor, mas nunca usei esse framework e nem sabia as vantagens de usar ele, neste post ou publicaçao vamos falar um pouco dele, pois eu mesmo tenho que estudar mais, e eu aprendendo mais quando passo conhecimento. Agora vamos mostrar os comandos do Watir Framework em Ruby, no final vamos falar da principal vantagem dele.
+No meu emprego atual, alguns projetos a galera implementou o Watir Framework, é um framework pouco falado no brasil, geralmente se fala mais do Capybara, o Capybara tem uma comunidade mais forte podemos falar. A muito tempo atrás eu já tinha lido alguma coisa no blog do desenvolvedor, mas nunca usei esse framework e nem sabia as vantagens de usar ele, neste post ou publicaçao vamos falar um pouco dele, pois eu mesmo tenho que estudar mais, e eu aprendendo mais quando passo conhecimento. Agora vamos mostrar os comandos do Watir Framework em Ruby, no final vamos falar da principal vantagem dele.
 
 ### Para instalar o Watir, devemos enviar o comando abaixo para o cmd/shell/prompt do sistema:
 ```ruby
