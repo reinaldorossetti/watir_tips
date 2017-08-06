@@ -1,5 +1,5 @@
 # watir_tips
-Vamos mostrar os comandos do Watir Framework em Ruby.
+No meu emprego atual, alguns projetos a galera implementou o Watir, eu já tinha lido alguma coisa no blog do desenvolvedor, mas nunca usei esse framework e nem sabia as vantagens de usar ele, neste post ou publicaçao vamos falar um pouco dele, pois eu mesmo tenho que estudar mais, e eu aprendendo mais quando passo conhecimento. Agora vamos mostrar os comandos do Watir Framework em Ruby.
 
 ### Para instalar o Watir, devemos enviar o comando abaixo para o cmd/shell/prompt do sistema:
 ```ruby
