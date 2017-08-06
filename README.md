@@ -14,9 +14,15 @@ driver = Watir::Browser.new :firefox
 
 ### Para carregar a URL do Browser devemos usar a função "goto".
 ```ruby
-require 'watir-webdriver'
+require 'watir'
 driver = Watir::Browser.new :firefox # should open a new Firefox window
 driver.goto 'http://nitrowriters.com/form/form.html'
+```
+
+### Para carregar a URL com o Browser padrão, ou seja não precisa usar a função "goto" usando essa forma, o padrão é o chrome.
+```ruby
+require 'watir'
+driver = Watir::Browser.start 'bit.ly/watir-webdriver-demo'
 ```
 
 ### Para enviar um texto para um campo texto ou textarea devemos usar a função "set".
