@@ -4,6 +4,10 @@ browser = Watir::Browser.new :ie
 browser.goto "XXX"
 browser.driver.manage.window.maximize
 
+=begin
+Esse exemplo eh um pouco complexo, pois por via normal nao consigo dar o click no menu javascript.
+=end
+
 # login
 browser.frame(name:'principal').input(id:'usuario').send_keys 'XXX'
 browser.frame(name:'principal').input(id:'senha').send_keys 'XXX'
