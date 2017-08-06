@@ -56,7 +56,7 @@ puts driver.p(:id => 'my_description').text
 driver.file_field.set 'C:/watir.txt'
 ```
 
-### Para limpara a seleção de um determinado compo usamos a função "clear".
+### Para limpara a seleção de um determinado campo usamos a função "clear".
 ```ruby
 driver.checkbox(:index => 1).clear
 ```
