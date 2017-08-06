@@ -104,7 +104,7 @@ Watir::Wait.until { browser.title == "Your Profile" }
 b.frame(id: 'content_ifr').send_keys 'hello world'
 ```
 
-Usando javascrit no Watir podemos fazer várias coisas.
+### Usando javascript no Watir podemos fazer várias coisas.
 ```ruby
 # don't return anything for alert
 browser.execute_script('window.alert = function() {}')
