@@ -104,6 +104,13 @@ Watir::Wait.until { browser.title == "Your Profile" }
 b.frame(id: 'content_ifr').send_keys 'hello world'
 ```
 
+### Dando o clique no botão em uma nova janela.
+```ruby
+browser.window(title: 'annoying popup').use do
+  browser.button(id: 'close').click
+end
+```
+
 ### Usando javascript no Watir podemos fazer várias coisas.
 ```ruby
 # don't return anything for alert
@@ -123,11 +130,4 @@ browser.execute_script('window.confirm = function() {return false}')
 
 # don't return anything for leave page popup
 browser.execute_script('window.onbeforeunload = null')
-```
-
-### Dando o clique no botão em uma nova janela.
-```ruby
-browser.window(title: 'annoying popup').use do
-  browser.button(id: 'close').click
-end
 ```
