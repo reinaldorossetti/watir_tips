@@ -6,8 +6,7 @@ No meu emprego atual, alguns projetos a galera implementou o Watir Framework, é
 gem install watir-webdriver
 ```
 
-### Após a instalação da biblioteca do Watir, devemos importar a biblioteca e instanciar o driver para poder usar as
-### funções que o framework tem disponível.
+### Após a instalação da biblioteca do Watir, devemos importar a biblioteca e instanciar o driver para poder usar as funções que o framework tem disponível.
 ```ruby
 require 'watir-webdriver'
 driver = Watir::Browser.new :firefox
