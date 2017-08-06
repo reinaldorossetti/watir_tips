@@ -129,8 +129,8 @@ driver.execute_script('window.confirm = function() {return false}')
 driver.execute_script('window.onbeforeunload = null')
 ```
 
-   O Watir tem vários comandos curtos pra realizar as ações, mas não ache que ele é melhor que o selenium, pois a base dele é selenium puro. O framework foi baseado no selenium, e o autor implementou várias camadas de abstração pra facilitar o uso, através do selenium você mesmo pode implementar o seu próprio framework, mas não dá pra negar que as implementações são muito boas, principalmente a parte do mapeamento de elementos.
-   No exemplo abaixo, temos todos os elementos com atributos iguais e todos são tags div, no watir ele auto mapea os elementos, já tendo a função div disponível, você somente precisa passar o index que vai identificar o elemento que deseja, ele chama isso de container de objetos html.
+   O Watir tem vários comandos curtos pra realizar as ações, mas não ache que ele é melhor que o selenium, pois a base dele é selenium puro. O framework foi baseado no selenium, e o autor implementou várias camadas de abstração pra facilitar o uso, através do selenium você mesmo pode implementar o seu próprio framework, mas não dá pra negar que as implementações são muito boas, principalmente a parte do mapeamento de elementos.<br>
+   No exemplo abaixo, temos todos os elementos com atributos iguais e todos são tags div, no watir ele auto mapea os elementos, já tendo a função div disponível, você somente precisa passar o index que vai identificar o elemento que deseja, ele chama isso de container de objetos html.<br>
    Pra finaliza o post, vem aquela pergunta será que funciona bem? Eu posso garantir que ele funciona bem, pois foi entregue um projeto com mais de 2000 casos de testes com ele.
 
 ```html
