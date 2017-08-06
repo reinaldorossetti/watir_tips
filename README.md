@@ -76,26 +76,26 @@ puts driver.p(:text => 'For Watir demonstration purposes only.').id #=> output: 
 
 ### No Watir para verificar se um determinado elemento foi dado o click ou set no caso do radio button, usamos o "set?" com uma interrogação no final vai retornar true ou false.
 ```ruby
-browser.radio(:name => 'familiar_rails', :value => '1').click
-browser.radio(:name => 'familiar_rails', :value => '1').set? #=> true
-browser.radio(:name => 'familiar_rails', :value => '3').set # same as click 
-browser.radio(:name => 'familiar_rails', :value => '1').set? #=> false
+driver.radio(:name => 'familiar_rails', :value => '1').click
+driver.radio(:name => 'familiar_rails', :value => '1').set? #=> true
+driver.radio(:name => 'familiar_rails', :value => '3').set # same as click 
+driver.radio(:name => 'familiar_rails', :value => '1').set? #=> false
 ```
 
 ### Agora vamos ver as coisas legais do Watir, comandos curtos que podemos fazer com facilidade.
 ```ruby
 
 # Vai dar o clique quando o botão estiver presente (timeout of 30 seconds).
-browser.button(:id => "send").when_present.click    
+driver.button(:id => "send").when_present.click    
 
 # Vai dar o clique quando o botão estiver presente, espera até 2 segundos, você pode determinar o tempo que deseja.
-browser.button(:id => "send").when_present(2).click # time out after 2 seconds 
+driver.button(:id => "send").when_present(2).click # time out after 2 seconds 
 
 # Outra forma de fazer usando o colchetes.
-browser.div(:id => "container").when_present { |div| div.button.click }
+driver.div(:id => "container").when_present { |div| div.button.click }
 
 # Verifica se o elemento está visivel e se existe, o retorno é true ou false.
-browser.div(:id => "foo").present?
+driver.div(:id => "foo").present?
 
 # espera se o título da página é igual o que você passou, mas ele já faz a espera dinâmica.
 Watir::Wait.until { browser.title == "Your Profile" }
@@ -106,28 +106,28 @@ b.frame(id: 'content_ifr').send_keys 'hello world'
 
 ### Dando o clique no botão em uma nova janela.
 ```ruby
-browser.window(title: 'annoying popup').use do
-  browser.button(id: 'close').click
+driver.window(title: 'annoying popup').use do
+  driver.button(id: 'close').click
 end
 ```
 
 ### Usando javascript no Watir podemos fazer várias coisas.
 ```ruby
 # don't return anything for alert
-browser.execute_script('window.alert = function() {}')
+driver.execute_script('window.alert = function() {}')
 
 # return some string for prompt to simulate user entering it
-browser.execute_script("window.prompt = function() {return 'my name'}")
+driver.execute_script("window.prompt = function() {return 'my name'}")
 
 # return null for prompt to simulate clicking Cancel
-browser.execute_script('window.prompt = function() {return null}')
+driver.execute_script('window.prompt = function() {return null}')
 
 # return true for confirm to simulate clicking OK
-browser.execute_script('window.confirm = function() {return true}')
+driver.execute_script('window.confirm = function() {return true}')
 
 # return false for confirm to simulate clicking Cancel
-browser.execute_script('window.confirm = function() {return false}')
+driver.execute_script('window.confirm = function() {return false}')
 
 # don't return anything for leave page popup
-browser.execute_script('window.onbeforeunload = null')
+driver.execute_script('window.onbeforeunload = null')
 ```
