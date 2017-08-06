@@ -124,3 +124,10 @@ browser.execute_script('window.confirm = function() {return false}')
 # don't return anything for leave page popup
 browser.execute_script('window.onbeforeunload = null')
 ```
+
+### Dando o clique no botão em uma nova janela.
+```ruby
+browser.window(title: 'annoying popup').use do
+  browser.button(id: 'close').click
+end
+```
