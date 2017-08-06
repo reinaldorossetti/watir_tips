@@ -10,7 +10,7 @@ test = driver.text_field id: 'entry_1000000'
 # Valida se o atributo realmente existe, retorna true ou false
 result = test.exists?
 
-# Se o atributo existe ele continua o teste, senao nem executa.
+# Se o elemento existe ele continua o teste, senao nem executa o restante do teste.
 if result 
   # Agora enviamos o nome Reinaldo Mateus para o campo texto.
   test.set 'Reinaldo Mateus'
