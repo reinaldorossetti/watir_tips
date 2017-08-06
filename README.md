@@ -113,22 +113,20 @@ end
 
 ### Usando javascript no Watir podemos fazer várias coisas.
 ```ruby
-# don't return anything for alert
-driver.execute_script('window.alert = function() {}')
 
-# return some string for prompt to simulate user entering it
+# Enviando a string 'my name' para o alert do tipo prompt. 
 driver.execute_script("window.prompt = function() {return 'my name'}")
 
-# return null for prompt to simulate clicking Cancel
+# Enviando um valor null para o alert do tipo prompt, isso simula um cancelar. 
 driver.execute_script('window.prompt = function() {return null}')
 
-# return true for confirm to simulate clicking OK
+# Retornar verdadeiro para confirmar para simular clicando no botão OK.
 driver.execute_script('window.confirm = function() {return true}')
 
-# return false for confirm to simulate clicking Cancel
+# Retornar falso para confirmar para simular clicando em um botão Cancelar.
 driver.execute_script('window.confirm = function() {return false}')
 
-# don't return anything for leave page popup
+# Não retorna nada, somente fecha o popup.
 driver.execute_script('window.onbeforeunload = null')
 ```
 
