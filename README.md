@@ -120,10 +120,10 @@ driver.execute_script("window.prompt = function() {return 'my name'}")
 # Enviando um valor null para o alert do tipo prompt, isso simula um cancelar. 
 driver.execute_script('window.prompt = function() {return null}')
 
-# Retornar verdadeiro para confirmar para simular clicando no botão OK.
+# Simular clicando no botão OK.
 driver.execute_script('window.confirm = function() {return true}')
 
-# Retornar falso para confirmar para simular clicando em um botão Cancelar.
+# Simular clicando em um botão Cancelar.
 driver.execute_script('window.confirm = function() {return false}')
 
 # Não retorna nada, somente fecha o popup.
