@@ -24,7 +24,7 @@ class LoginPage < PageBaseWeb
 
   end
 
-  private
+  # Web elements in page login.
 
   def user_field
     @browser.text_field(:name => "firstname")
