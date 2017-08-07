@@ -114,6 +114,10 @@ b.frame(id: 'content_ifr').send_keys 'hello world'
 driver.window(title: 'annoying popup').use do
   driver.button(id: 'close').click
 end
+# Outras opções:
+driver.window(:index => 1).use
+driver.window(:url => /closeable\.html/).use
+driver.window(:title => "closeable window").use
 ```
 
 ### Usando javascript no Watir podemos fazer várias coisas.
