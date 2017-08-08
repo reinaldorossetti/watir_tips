@@ -91,13 +91,17 @@ driver.radio(:name => 'familiar_rails', :value => '1').set? #=> false
 ```ruby
 
 # Vai dar o clique quando o botão estiver presente (timeout of 30 seconds).
-driver.button(:id => "send").when_present.click    
+elem = driver.button(:id => "send").wait_until_present   
+elem.click 
 
 # Vai dar o clique quando o botão estiver presente, espera até 2 segundos, você pode determinar o tempo que deseja.
-driver.button(:id => "send").when_present(2).click # time out after 2 seconds 
+driver.button(:id => "send").wait_until_present(2).click # time out after 2 seconds 
 
 # Outra forma de fazer usando o colchetes.
-driver.div(:id => "container").when_present { |div| div.button.click }
+driver.div(:id => "container").wait_until_present { |div| div.button.click }
+
+# A função faz o contrário do wait_until_present, ele espera o elemento desaparecer.
+driver.div(:id => "container").wait_while_present 
 
 # Verifica se o elemento está visivel e se existe, o retorno é true ou false.
 driver.div(:id => "foo").present?
