@@ -158,6 +158,6 @@ driver.execute_script('window.onbeforeunload = null')
 
 
 Referências do Watir:
-http://www.rubydoc.info/github/watir/watir-classic/Watir/Container
-https://github.com/watir/watir/wiki
+http://www.rubydoc.info/github/watir/watir-classic/Watir/Container<br>
+https://github.com/watir/watir/wiki<br>
 http://watir.com/docs/home
