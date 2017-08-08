@@ -157,7 +157,7 @@ driver.execute_script('window.onbeforeunload = null')
 ***browser.div(:class => "example", :index => 3)***
 
 
-Referências do Watir:
+Referências do Watir:<br>
 http://www.rubydoc.info/github/watir/watir-classic/Watir/Container<br>
 https://github.com/watir/watir/wiki<br>
 http://watir.com/docs/home
