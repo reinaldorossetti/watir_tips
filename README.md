@@ -88,9 +88,10 @@ driver.radio(:name => 'familiar_rails', :value => '1').set? #=> false
 ```
 
 ### Agora vamos ver as coisas legais do Watir, comandos curtos que podemos fazer com facilidade.
+### A função wait_until_present e wait_while_present, tem o timeout padrão igual a 30 segundos de acordo com a documentação.
 ```ruby
 
-# Vai dar o clique quando o botão estiver presente (timeout of 30 seconds).
+# Vai dar o clique quando o botão estiver presente.
 elem = driver.button(:id => "send").wait_until_present   
 elem.click 
 
@@ -100,7 +101,7 @@ driver.button(:id => "send").wait_until_present(2).click # time out after 2 seco
 # Outra forma de fazer usando o colchetes.
 driver.div(:id => "container").wait_until_present { |div| div.button.click }
 
-# A função faz o contrário do wait_until_present, ele espera o elemento desaparecer.
+# A função **wait_while_present** faz o contrário do wait_until_present, ele espera o elemento desaparecer.
 driver.div(:id => "container").wait_while_present 
 
 # Verifica se o elemento está visivel e se existe, o retorno é true ou false.
