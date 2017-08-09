@@ -17,3 +17,4 @@ if result
 
   # Imprimo o value que foi preenchido no console.
   puts driver.text_field(id: 'entry_1000000').value
+end
