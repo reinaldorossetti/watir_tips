@@ -158,10 +158,10 @@ driver.execute_script('window.onbeforeunload = null')
         <div class="example">5555</div>
     </body>
 </html>
-```
-***browser.div(:class => "example", :index => 3)***
+``` Ruby
+browser.div(:class => "example", :index => 3)
 # ou
-***browser.div(:class => "example", :text => 5555)***
+browser.div(:class => "example", :text => 5555)
 ```
 Referências do Watir:<br>
 http://www.rubydoc.info/github/watir/watir-classic/Watir/Container<br>
