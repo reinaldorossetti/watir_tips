@@ -158,6 +158,7 @@ driver.execute_script('window.onbeforeunload = null')
         <div class="example">5555</div>
     </body>
 </html>
+```
 ``` Ruby
 browser.div(:class => "example", :index => 3)
 # ou
