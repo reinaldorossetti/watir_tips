@@ -112,6 +112,8 @@ Watir::Wait.until { browser.title == "Your Profile" }
 
 # Envia um determinado texto para o elemento "b", que está em um outro frame, isso é feito em uma linha.
 b.frame(id: 'content_ifr').send_keys 'hello world'
+b.frame(:id => 'top_right').link(:index => 0).click
+driver.frame(:id => "FCCBMain").frameset.frameset.frame(:id => "MainLeft").id
 ```
 
 ### Dando o clique no botão em uma nova janela.
