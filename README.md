@@ -171,10 +171,9 @@ browser.div(:class => "example", :text => 5555)
 **Vamos comparar com o Selenium em Java:**
 
 ``` Java
- @FindBy(id = "id_time_zone")
+@FindBy(id = "id_time_zone")
 WebElement editSubOrg_timezone;
 
-// Reads and returns field
   List<String> getAllOptions(By by) {
       List<String> options = new ArrayList<String>();
       for (WebElement option : new Select(driver.findElement(by)).getOptions()) {
