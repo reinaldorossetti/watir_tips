@@ -166,6 +166,41 @@ browser.div(:class => "example", :index => 3)
 # ou
 browser.div(:class => "example", :text => 5555)
 ```
+
+
+**Vamos comparar com o Selenium em Java:**
+
+``` Java
+ @FindBy(id = "id_time_zone")
+WebElement editSubOrg_timezone;
+
+// Reads and returns field
+  List<String> getAllOptions(By by) {
+      List<String> options = new ArrayList<String>();
+      for (WebElement option : new Select(driver.findElement(by)).getOptions()) {
+          if (option.getAttribute("value") != "") options.add(option.getText());
+      }
+      return options;
+  } 
+
+List<String> options = getAllOptions(editSubOrg_timezone);
+System.out.println(options);
+
+```
+
+**Em Watir a mesma coisa:**
+``` Ruby
+  ELEM_SELECT = {id: "id_time_zone"}
+  
+  def select_list_text(locator_select)
+    Watir::Wait.until { @driver.select_list(locator_select).options.length > 0}
+    @driver.select_list(locator_select).options.map(&:text)
+  end
+  
+  puts select_list_text(ELEM_SELECT)
+```
+**Sem dúvida em ruby com Watir é muito mais simples fazer, sem contar que a função está esperando o combobox ter valores, ou seja espera espera o options.length > 0 ser igual a true, por 30 segundos.
+
 Referências do Watir:<br>
 http://www.rubydoc.info/github/watir/watir-classic/Watir/Container<br>
 https://github.com/watir/watir/wiki<br>
