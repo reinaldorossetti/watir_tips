@@ -114,6 +114,11 @@ Watir::Wait.until { browser.title == "Your Profile" }
 b.frame(id: 'content_ifr').send_keys 'hello world'
 b.frame(:id => 'top_right').link(:index => 0).click
 driver.frame(:id => "FCCBMain").frameset.frameset.frame(:id => "MainLeft").id
+
+browser.alert.ok # confirma o alerta.
+browser.alert.text # pega o texto de um alerta
+browser.alert.close # fecha o alerta.
+browser.alert.exists? # verifica se o alerta existe.
 ```
 
 ### Dando o clique no botão em uma nova janela.
