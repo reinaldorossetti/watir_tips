@@ -123,12 +123,18 @@ browser.alert.exists? # verifica se o alerta existe.
 
 ### Dando o clique no botão em uma nova janela.
 ```ruby
+# mudando de janela mantendo um bloco de código, ou seja somente vai funcionar nesse bloco de código na segunda janela,
+# quando sair ele vai fazer referência a janela anterior.
 driver.window(title: 'annoying popup').use do
+  driver.button(id: 'field').send_keys "teste"
   driver.button(id: 'close').click
+  browser.title # => "Titulo da Segunda janela"
 end
+browser.title # => "Titulo da Primeira janela"
+
 # Outras opções:
 driver.window(:index => 1).use
-driver.window(:url => /closeable\.html/).use
+driver.window(:url => /closeable\.html/).use # Exemplo usando Regex.
 driver.window(:title => "closeable window").use
 ```
 
