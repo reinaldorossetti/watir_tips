@@ -213,7 +213,7 @@ System.out.println(options);
   puts select_list_text(ELEM_SELECT)
 ```
 <b>Sem dúvida em ruby com Watir é muito mais simples fazer, sem contar que a função está esperando o combobox ter valores, ou seja espera espera o options.length > 0 ser igual a true, por 30 segundos. Em Java precisaria colocar um Thread.sleep fazendo um loop e verificando o valor do conteúdo por 30 segundos, bem mais complicado adicionando mais um loop, no Watir já é padrão e a espera é dinâmica. Um comando legal do Watir é o flash que vai iluminar o elemento web, você pode definir a cor, quantidade de flashes e o delay, o watir é um framework bem flexível, você consegue montar sua PageBase (Classe com funções genéricas) com bastante recursos.
-</b><br>
+</b><br><br>
 Exemplo do comando Flash:<br>
 element.flash(color: "green", flashes: 3, delay: 0.05)
 
