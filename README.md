@@ -177,8 +177,8 @@ puts browser.div(:class => "example", :index => 3).text
 # ou
 puts browser.div(:class => "example", :text => 5555).text
 
-# Em Watir pra imprimir todas as divs
-puts browser.div(:class => "example").map(&:text)
+# Em Watir pra imprimir todas as divs (browser.divs)
+puts browser.divs(:class => "example").map(&:text)
 ```
 
 
