@@ -173,9 +173,12 @@ driver.execute_script('window.onbeforeunload = null')
 </html>
 ```
 ``` Ruby
-browser.div(:class => "example", :index => 3)
+puts browser.div(:class => "example", :index => 3).text
 # ou
-browser.div(:class => "example", :text => 5555)
+puts browser.div(:class => "example", :text => 5555).text
+
+# Em Watir pra imprimir todas as divs
+puts browser.div(:class => "example").map(&:text)
 ```
 
 
