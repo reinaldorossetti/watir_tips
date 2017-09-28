@@ -38,7 +38,8 @@ driver.checkbox(:index => 2).click
 driver.textarea(:class => 'element textarea medium').click
 ```
 
-### Para efetuar um clique e colocar a espera até o elemento estar presente, fazemos assim.
+### Esperas Dinamicas - Para efetuar um clique e colocar a espera até o elemento estar presente, fazemos assim.
+### O padrão da espera interna é de 30 segundos e o intervalo que verificação é de 0.1
 ```ruby
 driver.radio(:name => 'familiar_rails', :value => '3').wait_until_present.click
 driver.checkbox(:index => 2).wait_until_present.click
