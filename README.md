@@ -3,7 +3,7 @@ No meu emprego atual, alguns projetos a galera implementou o Watir Framework, é
 
 ### Para instalar o Watir, devemos enviar o comando abaixo para o cmd/shell/prompt do sistema:
 ```ruby
-gem install watir-webdriver
+gem install watir
 ```
 
 ### Após a instalação da biblioteca do Watir, devemos importar a biblioteca e instanciar o driver para poder usar as funções que o framework tem disponível.
@@ -36,6 +36,20 @@ driver.textarea(:class => 'element textarea medium').set 'It was a long time ago
 driver.radio(:name => 'familiar_rails', :value => '3').click
 driver.checkbox(:index => 2).click
 driver.textarea(:class => 'element textarea medium').click
+```
+
+### Para efetuar um clique e colocar a espera até o elemento estar presente, fazemos assim.
+```ruby
+driver.radio(:name => 'familiar_rails', :value => '3').wait_until_present.click
+driver.checkbox(:index => 2).wait_until_present.click
+driver.textarea(:class => 'element textarea medium').wait_until_present.click
+
+# outra forma é usar a função generica de espera wait_until(&:present?).
+web_element = driver.checkbox(:index => 2)
+if web_element.wait_until(&:present?)
+  web_element.click
+end
+
 ```
 
 ### No Watir para pegar a localização de um elemento.
