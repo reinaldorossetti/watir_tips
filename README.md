@@ -171,6 +171,12 @@ driver.execute_script('window.confirm = function() {return false}')
 # Não retorna nada, somente fecha o popup.
 driver.execute_script('window.onbeforeunload = null')
 ```
+### Disparando um determinado evento html, podemos fazer assim no watir
+```ruby
+f = driver.iframes[1] # estou usando o conteiner de objetos do watir para filtrar o elemento.
+imagem  = elem.imgs[0]
+imagem.fire_event('onmouseover')
+```
 
   O Watir tem vários comandos curtos pra realizar as ações, mas não ache que ele é melhor que o selenium, pois a base dele é selenium puro. O framework foi baseado no selenium, e o autor implementou várias camadas de abstração pra facilitar o uso, através do selenium você mesmo pode implementar o seu próprio framework, mas não dá pra negar que as implementações são muito boas, principalmente a parte do mapeamento de elementos.<br>
   No exemplo abaixo, temos todos os elementos com atributos iguais e todos são tags div, no watir ele auto mapea os elementos, já tendo a função div disponível, você somente precisa passar o index que vai identificar o elemento que deseja, ele chama isso de container de objetos html, o que torna o trabalho de mapeamento mais fácil no Watir Framework.<br>
