@@ -174,7 +174,7 @@ driver.execute_script('window.onbeforeunload = null')
 ### Disparando um determinado evento html, podemos fazer assim no watir
 ```ruby
 f = driver.iframes[1] # estou usando o conteiner de objetos do watir para filtrar o elemento.
-imagem  = elem.imgs[0]
+imagem  = f.imgs[0]
 imagem.fire_event('onmouseover')
 ```
 
