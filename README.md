@@ -239,6 +239,7 @@ Exemplo do comando Flash:<br>
 element.flash(color: "green", flashes: 3, delay: 0.05)
 
 Referências do Watir:<br>
+https://www.rubydoc.info/gems/watir/
 http://www.rubydoc.info/github/watir/watir-classic/Watir/Container<br>
 https://github.com/watir/watir/wiki<br>
 http://watir.com/docs/home
