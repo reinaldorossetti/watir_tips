@@ -152,6 +152,14 @@ driver.window(:index => 1).use # vai mudar o foco para essa janela.
 driver.window(:url => /closeable\.html/).use # Exemplo usando Regex.
 driver.window(:title => "closeable window").use # Exemplo usando o titulo da janela.
 ```
+### Fazendo alguns assert ou raise/fail
+```ruby
+
+fail unless @browser.text.include? 'Reinaldo'
+
+expect(browser.text.include?("Reinaldo")).to be true
+
+```
 
 ### Usando javascript no Watir podemos fazer várias coisas.
 ```ruby
